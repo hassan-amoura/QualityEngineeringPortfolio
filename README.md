@@ -65,51 +65,7 @@ To run the TypeScript tests, you need to compile them first. Use this command to
 npm run test:ts
 
 
-## Example Tests
-
-### JavaScript Example
-
-Here’s a simple example of a JavaScript test using Playwright:
-
-const { chromium } = require('playwright');
-
-(async () => {
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
-  await page.goto('https://example.com');
-  const title = await page.title();
-  console.log(title); // Should log "Example Domain"
-  await browser.close();
-})();
-
-TypeScript Example
-Here’s the same example written in TypeScript:
-
-import { chromium } from 'playwright';
-
-(async () => {
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
-  await page.goto('https://example.com');
-  const title = await page.title();
-  console.log(title); // Should log "Example Domain"
-  await browser.close();
-})();
-
-
-To run the TypeScript example, make sure your tsconfig.json is properly configured, and run:
-
-npm run test:ts
-Test Results
-
-Once you run the tests, Playwright will open the browser, perform the actions, and print the results to the terminal.
-
-You will see the page title printed, for example:
-
-Example Domain
-
-
-Conclusion
+## Conclusion
 This project provides a simple and easy-to-understand setup for automating browser actions using Playwright in both JavaScript and TypeScript. You can extend the example tests to perform more complex actions, such as interacting with form elements, verifying page contents, and simulating user behavior.
 
 For more information, check out the Playwright Documentation (https://playwright.dev/).
